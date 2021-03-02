@@ -22,7 +22,7 @@ const Courses = ({ match }) => (
     
     {/* Write routes here... */}
       
-      <Route exact path={match.path} render={() => <Redirect to={`${match}/html`} />} />
+      <Route exact path={match.path} render={() => <Redirect to={`${match.path}/html`} />} />
       <Route path={`${match.path}/html`} render={() => <CourseContainer data={HTMLCourses}/>} />
       <Route path={`${match.path}/css`} render={() => <CourseContainer data={CSSCourses}/>} />
       <Route path={`${match.path}/javascript`} render={() => <CourseContainer data={JSCourses}/>} />
